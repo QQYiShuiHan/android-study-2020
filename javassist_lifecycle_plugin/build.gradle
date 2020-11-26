@@ -1,0 +1,33 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'java'
+
+dependencies {
+
+    implementation gradleApi()
+    implementation localGroovy()
+
+    implementation 'com.android.tools.build:gradle:4.0.0'
+    implementation 'org.javassist:javassist:3.27.0-GA'
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+def groupId = "com.vincent.javassist_plugin"
+def artifactId = "javassist_lifecycle_plugin"
+def version = "1.0.0"
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("../javassit_lifecycle_repo")) {
+                pom.version = version
+                pom.artifactId = artifactId
+                pom.groupId = groupId
+            }
+        }
+    }
+}

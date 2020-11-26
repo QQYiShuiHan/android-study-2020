@@ -1,0 +1,4 @@
+include ':asm_lifecycle_plugin'
+include ':javassist_lifecycle_plugin'
+include ':app'
+rootProject.name = "android-study-2020"

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_3"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_fade_in_or_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:text="fade out or in"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vincent.android_study_2020.view.AudienceListView
+        android:id="@+id/audience"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vincent.android_study_2020.view.MessagePanelView
+        android:id="@+id/message_panel"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audience" />
+
+
+    <com.vincent.android_study_2020.view.RevealAnimationLayout
+        android:id="@+id/ral_fade_in_or_out"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:content_is_reveal="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message_panel">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="这次的题目有点长，特意的将两个类似的东西进行了划分。也是为了完全重现我在遇到和解决这两个问题时候的过程。在一开始，是需求那边要我做一个我们聊天面板的渐变效果。经过多方查证，终于实现了这个功能。后来在迭代版本的时候又要加一个观众列表的右侧透明渐变效果，就想到了还用公屏同样的代码，然而中间竟然遇到了坑，还找不到攻略（好慌-。-），所以记录一下，防止后面遇到相同的问题没有资源参考"
+            android:textSize="16sp" />
+    </com.vincent.android_study_2020.view.RevealAnimationLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

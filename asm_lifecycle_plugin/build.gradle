@@ -1,0 +1,32 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'java'
+
+dependencies {
+
+    implementation gradleApi()
+    implementation localGroovy()
+
+    implementation 'com.android.tools.build:gradle:4.0.0'
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+def groupId = "com.vincent.asm_plugin"
+def artifactId = "asm_lifecycle_plugin"
+def version = "1.0.0"
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("../asm_lifecycle_repo")) {
+                pom.version = version
+                pom.artifactId = artifactId
+                pom.groupId = groupId
+            }
+        }
+    }
+}
