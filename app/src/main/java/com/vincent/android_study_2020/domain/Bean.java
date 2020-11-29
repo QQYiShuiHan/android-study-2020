@@ -6,4 +6,10 @@ package com.vincent.android_study_2020.domain;
 
 public class Bean {
 
+    private int age;
+    private String name;
+
+    public Bean(int age) {
+        this.age = age;
+    }
 }
