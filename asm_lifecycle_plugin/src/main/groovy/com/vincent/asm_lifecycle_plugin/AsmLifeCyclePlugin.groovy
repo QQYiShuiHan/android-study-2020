@@ -11,8 +11,8 @@ public class AsmLifeCyclePlugin implements Plugin<Project> {
     void apply(Project target) {
         System.out.println("<========= asm life cycle plugin start ... ===========>")
         def android = target.extensions.getByType(AppExtension)
-        AsmLifeCycleTransform asmTransform = new AsmLifeCycleTransform()
-        android.registerTransform(asmTransform)
+//        AsmLifeCycleTransform asmTransform = new AsmLifeCycleTransform()
+//        android.registerTransform(asmTransform)
     }
 }
 

@@ -1,3 +1,6 @@
+include ':apt-library'
+include ':apt-processor'
+include ':apt-annotation'
 include ':asm_lifecycle_plugin'
 include ':javassist_lifecycle_plugin'
 include ':app'
