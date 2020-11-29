@@ -9,7 +9,4 @@ public class Bean {
     private int age;
     private String name;
 
-    public Bean(int age) {
-        this.age = age;
-    }
 }
