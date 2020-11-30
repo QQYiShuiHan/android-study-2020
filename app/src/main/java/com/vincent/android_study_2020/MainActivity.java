@@ -6,8 +6,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.service.autofill.TextValueSanitizer;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.vincent.android_study_2020.algorithm.SimpleAlgorithm;
 import com.vincent.android_study_2020.algorithm.SimpleSort;
@@ -15,7 +17,10 @@ import com.vincent.android_study_2020.domain.Bean;
 import com.vincent.android_study_2020.view.AudienceListView;
 import com.vincent.android_study_2020.view.MessagePanelView;
 import com.vincent.android_study_2020.view.RevealAnimationLayout;
+import com.vincent.apt_annotation.BindView;
 import com.vincent.apt_library.BindViewTools;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
     private MessagePanelView messagePanel;
     private List<Bean> messagePanelList = new ArrayList<>();
     private RevealAnimationLayout animationLayout;
+
+    @BindView(R.id.tv_fade_in_or_out)
+    TextView mFadeInOrOut;
 
 
     @Override
@@ -54,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         messagePanel.refreshData(messagePanelList);
         animationLayout = findViewById(R.id.ral_fade_in_or_out);
 
-        findViewById(R.id.tv_fade_in_or_out).setOnClickListener(new View.OnClickListener() {
+        mFadeInOrOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 animationLayout.startAnimal(RevealAnimationLayout.AnimaType.FadeIn);

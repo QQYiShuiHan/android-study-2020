@@ -99,7 +99,8 @@ public class BindViewProcessor extends AbstractProcessor {
             ClassCreatorProxy proxy = mProxyMap.get(key);
             try {
                 mMessager.printMessage(Diagnostic.Kind.NOTE, " --> create " + proxy.getProxyClassFullName());
-                JavaFileObject javaFileObject = processingEnv.getFiler().createClassFile(proxy.getProxyClassFullName(), proxy.getTypeElement());
+                JavaFileObject javaFileObject = processingEnv.getFiler()
+                        .createSourceFile(proxy.getProxyClassFullName(), proxy.getTypeElement());
                 Writer writer = javaFileObject.openWriter();
                 writer.write(proxy.generateJavaCode());
                 writer.flush();
