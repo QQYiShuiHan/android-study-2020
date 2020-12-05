@@ -34,7 +34,7 @@ public class NotesDoc {
             4.singleInstance ：开辟一个新的栈，并以singleTask形式存在
             指定Activity的栈名 ： TaskAffinity
 
-
+            数据结构
 
 
 

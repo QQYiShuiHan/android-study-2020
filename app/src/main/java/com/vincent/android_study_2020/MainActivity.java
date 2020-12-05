@@ -11,8 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.vincent.android_study_2020.algorithm.SimpleAlgorithm;
-import com.vincent.android_study_2020.algorithm.SimpleSort;
+import com.vincent.android_study_2020.datastructure_and_algorithm.SimpleAlgorithm;
+import com.vincent.android_study_2020.datastructure_and_algorithm.SimpleSort;
 import com.vincent.android_study_2020.domain.Bean;
 import com.vincent.android_study_2020.view.AudienceListView;
 import com.vincent.android_study_2020.view.MessagePanelView;

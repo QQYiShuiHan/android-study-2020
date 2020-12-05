@@ -6,7 +6,7 @@ import android.util.Log;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.vincent.android_study_2020.algorithm.SimpleSort;
+import com.vincent.android_study_2020.datastructure_and_algorithm.SimpleSort;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,11 +27,5 @@ public class ExampleInstrumentedTest {
 		// Context of the app under test.
 		Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 		assertEquals("com.vincent.android_study_2020", appContext.getPackageName());
-	}
-
-	int[] arr = new int[]{9, 1, 2, 5, 7, 4, 8, 6, 3, 5};
-	public void sortText(){
-		SimpleSort.quickSort(arr);
-		Log.d("Sort", " result : " + Arrays.toString(arr));
 	}
 }

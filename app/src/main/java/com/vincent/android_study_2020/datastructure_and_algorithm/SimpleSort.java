@@ -1,4 +1,4 @@
-package com.vincent.android_study_2020.algorithm;
+package com.vincent.android_study_2020.datastructure_and_algorithm;
 
 import android.telephony.mbms.MbmsErrors;
 import android.util.Log;

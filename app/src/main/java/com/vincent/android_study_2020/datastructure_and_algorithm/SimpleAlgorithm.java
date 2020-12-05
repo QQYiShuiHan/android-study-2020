@@ -1,4 +1,4 @@
-package com.vincent.android_study_2020.algorithm;
+package com.vincent.android_study_2020.datastructure_and_algorithm;
 
 import java.util.HashMap;
 import java.util.LinkedList;
