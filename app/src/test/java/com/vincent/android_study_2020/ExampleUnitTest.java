@@ -28,7 +28,7 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void testSort(){
+    public void testSort() {
         SimpleSort.bubbleSort(arr);
         arr = new int[]{9, 1, 2, 5, 7, 4, 8, 6, 3, 5};
         SimpleSort.selectSort(arr);
@@ -43,8 +43,18 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void testSequenceList(){
+    public void testSequenceList() {
         DataStructureTest.testSequenceList();
+    }
+
+    @Test
+    public void testLinkList() {
+        DataStructureTest.testLinkList();
+    }
+
+    @Test
+    public void testFastSlowPointUse(){
+        DataStructureTest.testFastSlowPointUse();
     }
 
 
