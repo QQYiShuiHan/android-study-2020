@@ -50,9 +50,7 @@ public class MainActivity extends AppCompatActivity {
         // 测试apt
         BindViewTools.bind(this);
 
-
         new TransformTest().init();
-
 
         mContext = this;
         audience = (AudienceListView) findViewById(R.id.audience);
@@ -69,26 +67,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        reverseWords("Let's take LeetCode contest");
-
-        int[] nums = new int[]{2, 7, 11, 15};
-        int target = 9;
-        int[] result = SimpleAlgorithm.twoSum(nums, 26);
-        Log.d("twoSum", " result = " + Arrays.toString(result));
-
-        boolean isValid = SimpleAlgorithm.isValid("{(dfa{}[]sd())}");
-        Log.d("isValid", " isValid = " + isValid);
-
-
-        int[] arr = new int[]{9, 1, 2, 5, 7, 4, 8, 6, 3, 5};
-        SimpleSort.bubbleSort(arr);
-        SimpleSort.selectSort(arr);
-        SimpleSort.insertSort(arr);
-        SimpleSort.shellSort(arr);
-        SimpleSort.mergeSort(arr);
-
-
     }
 
 
@@ -100,34 +78,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private Handler mHandler = new Handler(Looper.getMainLooper());
-
     @Override
     public void onBackPressed() {
         getAudiences();
         audience.refreshData(audienceBeanList);
         messagePanel.refreshData(messagePanelList);
     }
-
-    public String reverseWords(String s) {
-        String[] strs = s.split(" ");
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < strs.length; i++) {
-            String str = strs[i];
-            int length = str.length();
-            String temp = "";
-            for (int j = length - 1; j >= 0; j--) {
-                temp = temp + str.charAt(j);
-            }
-            Log.d("reverseWords", " temp = " + temp);
-            if (i != 0) {
-                sb.append(" ");
-            }
-            sb.append(temp);
-        }
-        Log.d("reverseWords", " sb = " + sb);
-        return sb.toString();
-    }
-
 
 }

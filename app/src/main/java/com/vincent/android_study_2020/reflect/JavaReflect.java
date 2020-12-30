@@ -118,7 +118,8 @@ public class JavaReflect {
      * 					2.value:要为字段设置的值；
      */
 
-    private void getFields() throws ClassNotFoundException, NoSuchFieldException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    private void getFields() throws ClassNotFoundException, NoSuchFieldException, NoSuchMethodException,
+            IllegalAccessException, InvocationTargetException, InstantiationException {
 
         //1.获取Class对象
         Class stuClass = Class.forName("com.vincent.android_study_2020.reflect.Student");
@@ -173,7 +174,8 @@ public class JavaReflect {
      * 					obj : 要调用方法的对象；
      * 					args:调用方式时所传递的实参；
      */
-    private void callReflectMethod() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, ClassNotFoundException {
+    private void callReflectMethod() throws NoSuchMethodException, IllegalAccessException,
+            InvocationTargetException, InstantiationException, ClassNotFoundException {
         //1.获取Class对象
         Class stuClass = Class.forName("com.vincent.android_study_2020.reflect.Student");
         //2.获取所有公有方法

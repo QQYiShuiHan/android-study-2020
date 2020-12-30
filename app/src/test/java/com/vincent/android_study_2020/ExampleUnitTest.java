@@ -44,17 +44,17 @@ public class ExampleUnitTest {
 
     @Test
     public void testSequenceList() {
-        DataStructureTest.testSequenceList();
+//        DataStructureTest.testSequenceList();
     }
 
     @Test
     public void testLinkList() {
-        DataStructureTest.testLinkList();
+//        DataStructureTest.testLinkList();
     }
 
     @Test
     public void testFastSlowPointUse(){
-        DataStructureTest.testFastSlowPointUse();
+//        DataStructureTest.testFastSlowPointUse();
     }
 
 
