@@ -32,9 +32,7 @@ public class SimpleSort {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    swap(arr, j, j + 1);
                 }
             }
         }
@@ -61,9 +59,7 @@ public class SimpleSort {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+                    swap(arr, i, j);
                 }
             }
         }
@@ -78,9 +74,7 @@ public class SimpleSort {
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (arr[j - 1] > arr[j]) {
-                    int temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
+                    swap(arr, j - 1, j);
                 } else {
                     break;
                 }
@@ -107,9 +101,7 @@ public class SimpleSort {
             for (int i = h; i < arr.length; i++) {// 从h之后都是待插入的元素
                 for (int j = i; j >= h; j -= h) {
                     if (arr[j - h] > arr[j]) {
-                        int temp = arr[j - h];
-                        arr[j - h] = arr[j];
-                        arr[j] = temp;
+                        swap(arr, j - h, j);
                     } else {
                         break;
                     }
