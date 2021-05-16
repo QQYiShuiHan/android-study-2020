@@ -1,8 +1,7 @@
 package com.vincent.asm_lifecycle_plugin;
 
 import org.objectweb.asm.MethodVisitor;
-
-import shadow.bundletool.com.android.tools.r8.org.objectweb.asm.Opcodes;
+import org.objectweb.asm.Opcodes;
 
 public class LifeCycleMethodVisitor extends MethodVisitor {
 
@@ -20,11 +19,10 @@ public class LifeCycleMethodVisitor extends MethodVisitor {
     @Override
     public void visitCode() {
         super.visitCode();
-
-        System.out.println("MethodVisitor visitCode -----------");
+        System.out.println("MethodVisitor visitCode------");
 
         mv.visitLdcInsn("TAG");
-        mv.visitLdcInsn(className + " ------> " + methodName);
+        mv.visitLdcInsn(className + "---->" + methodName);
         mv.visitMethodInsn(Opcodes.INVOKESTATIC, "android/util/Log", "i", "(Ljava/lang/String;Ljava/lang/String;)I", false);
         mv.visitInsn(Opcodes.POP);
     }

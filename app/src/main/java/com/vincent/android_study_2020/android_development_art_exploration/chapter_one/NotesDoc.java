@@ -4,7 +4,7 @@ public class NotesDoc {
 
     // 第一章
 
-    /*
+    /**
        一、Activity的生命周期和启动模式
           1.activity的生命周期
             （1）onCreate ——> onRestore -> onStart -> onResume -> onPause -> onStop -> onDestroy

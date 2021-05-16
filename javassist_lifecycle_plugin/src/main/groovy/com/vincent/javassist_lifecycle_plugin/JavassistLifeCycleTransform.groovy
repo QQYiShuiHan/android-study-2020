@@ -21,7 +21,7 @@ class JavassistLifeCycleTransform extends Transform {
 
     @Override
     public String getName() {
-        return "JavassitLifeCycleTransform";
+        return "JavassistLifeCycleTransform";
     }
 
     @Override
@@ -82,7 +82,7 @@ class JavassistLifeCycleTransform extends Transform {
             ctClass.defrost()
         }
         CtMethod ctMethod = ctClass.getDeclaredMethod("init");
-        ctMethod.insertAfter("System.out.println(\"this is insert code ... ^_^ .... \");")
+        ctMethod.insertAfter("System.out.println(\"---->this is insert code ... ^_^ .... \");")
         ctClass.writeFile(absolutePath)
         ctClass.detach()
 
