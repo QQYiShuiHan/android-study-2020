@@ -5,6 +5,10 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 
+/**
+ * ASM 动态编译
+ * 好的博客 https://blog.csdn.net/a296777513/article/details/90665134
+ */
 class AsmLifeCyclePlugin implements Plugin<Project> {
 
     @Override

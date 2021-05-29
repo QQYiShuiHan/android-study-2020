@@ -1,0 +1,28 @@
+收藏一些好的文章
+
+一、Gradle Transform
+
+    使用 ASM 动态编译
+    https://blog.csdn.net/a296777513/article/details/90665134
+
+    使用 Javassist 动态编译
+    https://blog.csdn.net/Double2hao/article/details/105173087
+
+
+二、Android 注解处理器
+    java注解
+    https://blog.csdn.net/fengxingzhe001/article/details/78520298 （注解解释）
+    APT： Annotation Processor Tool
+    https://www.jianshu.com/p/e11307ad5cfc （ButterKnife 原理）
+
+
+三、 Android屏幕绘制机制及硬件加速
+    android 屏幕绘制机制及硬件加速
+    https://blog.csdn.net/qian520ao/article/details/81144167
+
+    1、OpenGL（Open Graphics Library）：
+        是指定义了一个跨编程语言、跨平台的编程接口规格的专业的图形程序接口。它用于三维图像（二维的亦可），
+        是一个功能强大，调用方便的底层图形库。
+    2、OpenGL ES （OpenGL for Embedded Systems）
+        是 OpenGL 三维图形 API 的子集，针对手机、PDA和游戏主机等嵌入式设备而设计。
+        SurfaceFlinger HardWareComposer Dirty Resterization
